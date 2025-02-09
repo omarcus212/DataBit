@@ -19,7 +19,7 @@ Após concluir a instalação e configuração conforme descrito acima, siga os 
 
    composer start ou php -S localhost:8080 -t src/
 
-> **Nota**: Você pode alterar a porta `8080` para qualquer outra porta disponível de sua preferência. Por exemplo, para usar a porta `8000`, você executaria: Composer start ou php -S localhost:8000.
+>  **Nota**: Você pode alterar a porta `8080` para qualquer outra porta disponível de sua preferência. Por exemplo, para usar a porta `8000`, você executaria: Composer start ou php -S localhost:8000.
 
 2. **Acessar a View de Contatos**:
    Abra um navegador da web e visite o seguinte URL para acessar a view de contatos:
