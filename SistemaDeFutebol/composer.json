@@ -1,0 +1,20 @@
+{
+    "name": "marcus/teste",
+    "require": {
+        "laravel/passport": "^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marcus\\Teste\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "omarcus212",
+            "email": "marcusvinniciusouza@gmail.com"
+        }
+    ],
+    "scripts": {
+        "start": "php -S localhost:8080 -t src/"
+    }
+}

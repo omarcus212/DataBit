@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Define o diretório base (ajuste se necessário)
+RewriteBase /seu-projeto/
+
+# Se for um arquivo ou diretório existente, permite o acesso direto
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redireciona todas as requisições para src/view/index.php
+RewriteRule ^(.*)$ src/view/index.php [QSA,L]
