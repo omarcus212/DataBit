@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . '/../Controller/index.php';
+require __DIR__ . '/../../env.php';
 
 $nomeTime = (string) "";
 $contador = (int) 0;

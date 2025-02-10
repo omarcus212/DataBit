@@ -10,6 +10,11 @@
 
 - Execute o seguinte comando para instalar as dependências necessárias: `composer install`
 
+2. **Configuração do Ambiente**:
+
+- Crie um arquivo chamado `env.php` na raiz do projeto.
+- Para ajudá-lo a configurar seu arquivo `env.php`, você pode consultar o exemplo fornecido em `env.example.php`.
+
 ## Iniciando a Aplicação
 
 Após concluir a instalação e configuração conforme descrito acima, siga os passos abaixo para iniciar a aplicação:
@@ -19,7 +24,7 @@ Após concluir a instalação e configuração conforme descrito acima, siga os 
 
    composer start ou php -S localhost:8080 -t src/
 
->  **Nota**: Você pode alterar a porta `8080` para qualquer outra porta disponível de sua preferência. Por exemplo, para usar a porta `8000`, você executaria: Composer start ou php -S localhost:8000.
+> **Nota**: Você pode alterar a porta `8080` para qualquer outra porta disponível de sua preferência. Por exemplo, para usar a porta `8000`, você executaria: Composer start ou php -S localhost:8000.
 
 2. **Acessar a View de Contatos**:
    Abra um navegador da web e visite o seguinte URL para acessar a view de contatos:

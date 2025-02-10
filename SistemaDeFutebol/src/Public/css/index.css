@@ -4,11 +4,17 @@
      box-sizing: border-box;
  }
 
+ body{
+    border: 5px solid #ffffff;
+    padding: 50px;
+    background-color: #007bff;
+ }
+
  main {
      display: flex;
      flex-direction: column;
      gap: 30px;
-   
+    
  }
 
  section {
@@ -26,6 +32,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    background-color: #333;
 }
 
 input {
