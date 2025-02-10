@@ -69,14 +69,14 @@ if (!empty($nomeTime)) {
         if ((!empty($data))) {
           foreach ($data as $jogo) {
             if (
-              $data[$contador]["homeTeam"] == null || $data[$contador]["homeTeam"]["id"] == null || $data[$contador]["homeTeam"]["id"] == null ||
-              $data[$contador]["awayTeam"] == null || $data[$contador]["awayTeam"]["id"] == null || $data[$contador]["awayTeam"]["id"] == null
+              $jogo["homeTeam"] == null || $jogo["homeTeam"]["id"] == null || $jogo["homeTeam"]["id"] == null ||
+              $jogo["awayTeam"] == null || $jogo["awayTeam"]["id"] == null || $jogo["awayTeam"]["id"] == null
             ) {
             }
             ?>
             <tr>
               <?php
-              $data[$contador]["id"]
+              $jogo["id"]
                 ?>
               <td>
                 <img src='<?php echo $jogo["homeTeam"]["crest"]; ?>' />
@@ -94,7 +94,7 @@ if (!empty($nomeTime)) {
 
               <td>
                 <?php
-                $data_iso = $data[$contador]["utcDate"];
+                $data_iso = $jogo["utcDate"];
                 $dataHora = new DateTime($data_iso, new DateTimeZone("UTC"));
                 $dataHora->setTimezone(new DateTimeZone("America/Sao_Paulo"));
 
@@ -107,21 +107,21 @@ if (!empty($nomeTime)) {
 
             <tr>
               <td>
-                <?php echo $data[$contador]["score"]["fullTime"]["home"] + $data[$contador]["score"]["halfTime"]["home"] ?>
+                <?php echo $jogo["score"]["fullTime"]["home"] + $jogo["score"]["halfTime"]["home"] ?>
               </td>
               <td>
                 x
               </td>
               <td>
-                <?php echo $data[$contador]["score"]["fullTime"]["away"] + $data[$contador]["score"]["halfTime"]["away"] ?>
+                <?php echo $jogo["score"]["fullTime"]["away"] + $jogo["score"]["halfTime"]["away"] ?>
               </td>
               <td>
                 <?php
-                if ($data[$contador]["score"]["winner"] == "HOME_TEAM") {
-                  echo $data[$contador]["homeTeam"]["name"];
-                } elseif ($data[$contador]["score"]["winner"] == "AWAY_TEAM") {
-                  echo $data[$contador]["awayTeam"]["name"];
-                } else if ($data[$contador]["score"]["winner"] == "DRAW") {
+                if ($jogo["score"]["winner"] == "HOME_TEAM") {
+                  echo $jogo["homeTeam"]["name"];
+                } elseif ($jogo["score"]["winner"] == "AWAY_TEAM") {
+                  echo $jogo["awayTeam"]["name"];
+                } else if ($jogo["score"]["winner"] == "DRAW") {
                   echo "Empate";
                 } else {
                   echo "Em breve";
